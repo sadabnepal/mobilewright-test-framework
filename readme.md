@@ -63,8 +63,12 @@ apps
     -> ios (.zip file for ios goes in this folder)
 ```
 3. Rename files as below
-    - android apk file: wdiodemoapp.apk
-    - ios zip file: wdiodemoapp.zip
+    - android apk file: <b> wdiodemoapp.apk </b>
+    - ios zip file: <b> wdiodemoapp.zip </b>
+
+####  Refer Folder Structure
+
+![folder-structure.png](./samples/folder-structure.png)
 
 ---
 
