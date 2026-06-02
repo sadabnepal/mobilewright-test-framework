@@ -11,7 +11,6 @@ test.beforeEach('open login screen', async ({ screen }) => {
     await expect(loginPage.loginTab).toBeVisible();
 });
 
-
 test("login form fields", async ({ screen }) => {
     const loginPage = new LoginPage(screen);
 
@@ -20,8 +19,6 @@ test("login form fields", async ({ screen }) => {
     await expect(loginPage.signInButton).toBeVisible();
     await expect(loginPage.biometricLoginInfo).toHaveText('When the device has Touch/FaceID (iOS) or FingerPrint enabled a biometrics button will be shown to use and test the login.');
 });
-
-
 
 test('login with invalid email and less than allowed char password', async ({ screen }) => {
     const loginPage = new LoginPage(screen);

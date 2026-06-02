@@ -4,7 +4,6 @@ import MenuPage from '../pages/menu.page';
 import LoginPage from '../pages/login.page';
 import SignUpPage from '../pages/signup.page';
 
-
 test.beforeEach('open sign up screen', async ({ screen }) => {
     const menuPage = new MenuPage(screen);
     await menuPage.getHomeMenu('Login').tap();
