@@ -2,7 +2,7 @@ import { test, expect } from '@mobilewright/test';
 import { faker } from '@faker-js/faker';
 import MenuPage from '../pages/menu.page';
 import LoginPage from '../pages/login.page';
-import SignUpPage from '../pages/singup.page';
+import SignUpPage from '../pages/signup.page';
 
 
 test.beforeEach('open sign up screen', async ({ screen }) => {
