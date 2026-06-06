@@ -1,12 +1,16 @@
 import { Screen } from "mobilewright";
 
-export type MenuOption = "Home" | "Webview" | "Login" | "Forms" | "Swipe" | "Drag" | "Menu";
+export type MenuOptionIos = "Home" | "Webview" | "Login" | "Forms" | "Swipe" | "Drag" | "Menu";
+export type MenuOptionAndroid = "Home" | "Web" | "Login" | "Forms" | "Swipe" | "Drag" | "Menu";
 
 export default class MenuPage {
-    constructor(readonly screen: Screen) { }
 
-    getHomeMenu(option: MenuOption) {
-        return this.screen.getByRole('button', { name: option });
+    constructor(readonly screen: Screen, readonly platform: 'ios' | 'android' | undefined) { }
+
+    getHomeMenu(option: MenuOptionIos | MenuOptionAndroid) {
+        return this.platform === 'ios'
+            ? this.screen.getByRole('button', { name: option })
+            : this.screen.getByText(option);
     }
 
 }

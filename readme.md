@@ -72,6 +72,34 @@ apps
 
 ---
 
+
+###
+Android:
+```
+sdkmanager "system-images;android-34;google_apis;arm64-v8a"
+avdmanager create avd -n Pixel_7 -k "system-images;android-34;google_apis;arm64-v8a"
+emulator -avd Pixel_7
+
+
+
+SET ANDROID HOME PATH:
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/build-tools/34.0.0
+```
+
+check devices: adb devices
+
+You should see something like:
+```
+List of devices attached
+emulator-5554   device
+```
+
+---
+
 ## References
 
 - [📖 **Mobilewright Getting started**](https://mobilewright.dev/docs/getting-started/writing-tests)
